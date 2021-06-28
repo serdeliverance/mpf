@@ -40,3 +40,5 @@ RUNNING_PID
 
 # Mac specific
 .DS_Store*
+
+.bsp/
