@@ -3,7 +3,7 @@ import React from 'react';
 
 function Expenses() {
   return (
-    <Button color="primary">Hola</Button>
+    <Button color="primary">Expenses</Button>
   );
 }
 
