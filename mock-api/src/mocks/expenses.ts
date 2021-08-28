@@ -1,4 +1,4 @@
-const expenses: Array<Expense> = [
+export const expenses: Expense[] = [
     {
         "id": 1,
         "amount": 650.0,
@@ -18,5 +18,3 @@ const expenses: Array<Expense> = [
         "subcategories": ["lifts"]
     }
 ]
-
-module.exports = expenses
