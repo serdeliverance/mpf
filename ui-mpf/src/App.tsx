@@ -1,8 +1,8 @@
 import React from 'react';
-import NavBar from './navbar/NavBar';
-import Expenses from './expenses/Expenses';
-import Charts from './charts/Charts';
-import Footer from './footer/Footer';
+import NavBar from './components/NavBar';
+import Expenses from './components/Expenses';
+import Charts from './components/Charts';
+import Footer from './components/Footer';
 
 function App() {
   return (

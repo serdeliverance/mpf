@@ -8,6 +8,13 @@ import {
 import React from 'react';
 
 function Expenses() {
+
+  async function getExpenses() {
+    const response = await fetch('http://locahost:5000/api/v1/expenses', {
+      method: 'GET'
+    })
+  }
+
   return (
     <Table arial-label="simple table">
       <TableHead>
