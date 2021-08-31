@@ -1,8 +1,8 @@
-import React from 'react';
-import NavBar from './components/NavBar';
-import Expenses from './components/Expenses';
-import Charts from './components/Charts';
-import Footer from './components/Footer';
+import React from 'react'
+import NavBar from './components/NavBar'
+import Expenses from './components/Expenses'
+import Charts from './components/Charts'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <Charts />
       <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

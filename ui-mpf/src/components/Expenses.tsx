@@ -4,25 +4,24 @@ import {
   TableCell,
   TableHead,
   TableRow,
-} from '@material-ui/core';
+} from '@material-ui/core'
 
-import React, { useState, useEffect } from 'react';
-import Expense from '../domain/Expense';
+import React, { useState, useEffect } from 'react'
+import Expense from '../domain/Expense'
 
-import { expenseService } from '../services/ExpenseService';
+import getExpenses from '../services/ExpenseService'
 
 function Expenses() {
-  
   const [expenses, setExpenses] = useState<Expense[]>([])
 
   useEffect(() => {
     const today = new Date()
-    expenseService.getExpenses(today.getMonth(), today.getFullYear())
-      .then(expensesResp => {
+    getExpenses(today.getMonth(), today.getFullYear())
+      .then((expensesResp) => {
         setExpenses(expensesResp)
       })
-      .catch(error => {
-        console.log(`error: ${error}`)
+      .catch((error) => {
+        console.log(error)
       })
   }, [])
 
@@ -40,18 +39,15 @@ function Expenses() {
           </TableRow>
         </TableHead>
         <TableBody>
-          { expenses && expenses.map((exp) =>
-              (
-                <TableRow key={exp.id}>
-                  <TableCell component="th" scope="row">{exp.name}</TableCell> 
-                </TableRow>
-              )
-            )
-          }
+          { expenses && expenses.map((exp) => (
+            <TableRow key={exp.id}>
+              <TableCell component="th" scope="row">{exp.name}</TableCell>
+            </TableRow>
+          ))}
         </TableBody>
       </Table>
     </>
-  );
+  )
 }
 
-export default Expenses;
+export default Expenses

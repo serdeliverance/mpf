@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import {
   AppBar,
   IconButton,
   Toolbar,
-} from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+} from '@material-ui/core'
+import MenuIcon from '@material-ui/icons/Menu'
 
 function NavBar() {
   return (
@@ -15,7 +15,7 @@ function NavBar() {
         </IconButton>
       </Toolbar>
     </AppBar>
-  );
+  )
 }
 
-export default NavBar;
+export default NavBar

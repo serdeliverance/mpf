@@ -20,6 +20,9 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": ["error"],
+        "semi": ["error", "never"],
         "react/jsx-filename-extension": [
             2,
             {

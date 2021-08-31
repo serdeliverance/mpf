@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'
 import {
   Box,
   makeStyles,
-} from '@material-ui/core';
+} from '@material-ui/core'
 
 const useStyles = makeStyles(() => ({
   footer: {
@@ -10,10 +10,10 @@ const useStyles = makeStyles(() => ({
     position: 'fixed',
     width: '100%',
   },
-}));
+}))
 
 function Footer() {
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <footer className={classes.footer}>
@@ -24,7 +24,7 @@ function Footer() {
         </Box>
       </Box>
     </footer>
-  );
+  )
 }
 
-export default Footer;
+export default Footer
