@@ -8,7 +8,8 @@ app.use(express.json())
 
 const port = 5000
 
-app.get('/expenses', (req: Request, res: Response) => {
+// TODO parameterize api version to avoid harding it in every endpoint
+app.get('/api/v1/expenses', (req: Request, res: Response) => {
     return res.status(200).send(expenses)
 })
 
