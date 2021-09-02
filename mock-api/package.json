@@ -4,7 +4,7 @@
   "description": "A mock API for mocking MPF responses",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node server.js"
   },
   "author": "serdeliverance",
   "license": "ISC",
