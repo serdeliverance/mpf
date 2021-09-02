@@ -1,4 +1,4 @@
-export const expenses: Expense[] = [
+const expenses = [
     {
         "id": 1,
         "amount": 650.0,
@@ -18,3 +18,7 @@ export const expenses: Expense[] = [
         "subcategories": ["lifts"]
     }
 ]
+
+module.exports = {
+    expenses
+}
