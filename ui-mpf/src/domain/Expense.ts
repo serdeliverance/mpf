@@ -4,5 +4,7 @@ export default interface Expense {
     description?: string,
     provider: string,
     date: Date,
+    category: string,
+    subcategories: string[],
     amount: number
 }

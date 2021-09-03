@@ -1,7 +1,6 @@
 import React from 'react'
 import NavBar from './components/NavBar'
 import Expenses from './components/Expenses'
-import Charts from './components/Charts'
 import Footer from './components/Footer'
 
 function App() {
@@ -9,7 +8,6 @@ function App() {
     <>
       <NavBar />
       <Expenses />
-      <Charts />
       <Footer />
     </>
   )

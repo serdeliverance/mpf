@@ -15,7 +15,7 @@ const expenses = [
         "provider": "uber",
         "date": new Date(2021, 8, 20),
         "category": "necessary",
-        "subcategories": ["lifts"]
+        "subcategories": ["lifts", "free time"]
     }
 ]
 

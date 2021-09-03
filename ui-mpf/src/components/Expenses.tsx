@@ -4,6 +4,7 @@ import {
   TableCell,
   TableHead,
   TableRow,
+  Chip,
 } from '@material-ui/core'
 
 import React, { useState, useEffect } from 'react'
@@ -42,6 +43,13 @@ function Expenses() {
           { expenses && expenses.map((exp) => (
             <TableRow key={exp.id}>
               <TableCell component="th" scope="row">{exp.name}</TableCell>
+              <TableCell align="right">{exp.description}</TableCell>
+              <TableCell align="right">{exp.category}</TableCell>
+              <TableCell align="right">
+                { exp.subcategories.length > 0 ? exp.subcategories.map((cat: string) => <Chip label={cat} />) : '' }
+              </TableCell>
+              <TableCell align="right">{exp.date}</TableCell>
+              <TableCell align="right">{exp.amount}</TableCell>
             </TableRow>
           ))}
         </TableBody>
