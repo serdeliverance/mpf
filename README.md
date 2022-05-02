@@ -5,20 +5,12 @@ A personal portfolio project.
 # Stack
 
 * Scala
-* Play/Akka/Akka Streams
-* React (with Typescript)
-* Node
-* NestJS
+* Cats Effect
+* Hexagonal Architecture
 * Docker
 * Kafka
 * Postgres
-* Kubernetes (in the future)
-
-# Requirements
-
-* SBT
-* Node >= 14
-* Docker and docker-compose
+* Kubernetes
 
 # Architecture
 
