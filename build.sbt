@@ -38,3 +38,15 @@ lazy val balance = (project in file("balance"))
       munitCatsEffect3        % Test
     )
   )
+
+lazy val account = (project in file("account"))
+  .settings(
+    name := "account",
+    libraryDependencies ++= Seq(
+      catsEffect,
+      catsEffectKernel,
+      catsEffectStd,
+      catsEffectTestingSpecs2 % Test,
+      munitCatsEffect3        % Test
+    )
+  )
