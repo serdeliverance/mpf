@@ -1,6 +1,7 @@
 package io.github.sdev.mpf.domain.entities
 
 import java.time.OffsetDateTime
+import cats.data.Validated
 
 case class Account(
     name: String,
@@ -10,3 +11,9 @@ case class Account(
     createdAt: OffsetDateTime,
     id: Option[Long] = None
 )
+
+object Account:
+
+  extension (account: Account)
+    def toValidated[ValidationResult[Account]] =
+      AccountValidator.validate(account)
