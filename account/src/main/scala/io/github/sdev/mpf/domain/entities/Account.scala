@@ -1,4 +1,4 @@
-package io.github.sdev.mpf.domain
+package io.github.sdev.mpf.domain.entities
 
 import java.time.OffsetDateTime
 
