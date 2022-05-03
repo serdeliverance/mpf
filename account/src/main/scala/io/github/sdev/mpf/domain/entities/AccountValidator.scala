@@ -5,6 +5,7 @@ import cats.data.NonEmptyList
 import cats.data.Validated.Invalid
 import cats.data.Validated.Valid
 import cats.implicits._
+import java.time.OffsetDateTime
 
 object AccountValidator:
 
@@ -21,8 +22,16 @@ object AccountValidator:
     if (userId > 0) userId.validResult else UserIdIsInvalid.invalidResult
 
   private def validateInitialAmount(initialAmount: BigDecimal): ValidationResult[BigDecimal] =
-    if (initialAmount > 0) initialAmount.validResult else InitialAmountIsInvalid.invalidResult
+    if (initialAmount > 0) initialAmount.validResult else InitialAmountNotPositive.invalidResult
+
+  private def validateCreatedAt(createdAt: OffsetDateTime): ValidationResult[OffsetDateTime] =
+    if (createdAt.isBefore(OffsetDateTime.now)) createdAt.validResult else CreationDateIsInvalid.invalidResult
 
   def validate(account: Account): ValidationResult[Account] =
-    (validateName(account.name), validateUserId(account.userId), validateInitialAmount(account.initialAmount))
-      .mapN((_, _, _) => account)
+    (
+      validateName(account.name),
+      validateUserId(account.userId),
+      validateInitialAmount(account.initialAmount),
+      validateCreatedAt(account.createdAt)
+    )
+      .mapN((_, _, _, _) => account)

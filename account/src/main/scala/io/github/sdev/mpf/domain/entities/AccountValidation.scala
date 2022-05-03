@@ -16,5 +16,8 @@ case object NameIsEmpty extends AccountValidation:
 case object UserIdIsInvalid extends AccountValidation:
   def errorMessage: String = "userId is not valid"
 
-case object InitialAmountIsInvalid extends AccountValidation:
+case object InitialAmountNotPositive extends AccountValidation:
   def errorMessage: String = "Initial amount should be positive"
+
+case object CreationDateIsInvalid extends AccountValidation:
+  def errorMessage: String = "creation date is not valid"
