@@ -3,6 +3,7 @@ import sbt._
 object Dependencies {
 
   object V {
+    val cats                    = "2.7.0"
     val catsEffect              = "3.3.11"
     val catsEffectTestingSpecs2 = "1.4.0"
     val munitCatsEffect3        = "1.0.7"
@@ -10,6 +11,7 @@ object Dependencies {
     val organizeImports = "0.6.0"
   }
 
+  val catsCore                = "org.typelevel"        %% "cats-core"                  % V.cats
   val catsEffect              = "org.typelevel"        %% "cats-effect"                % V.catsEffect
   val catsEffectKernel        = "org.typelevel"        %% "cats-effect-kernel"         % V.catsEffect
   val catsEffectStd           = "org.typelevel"        %% "cats-effect-std"            % V.catsEffect
