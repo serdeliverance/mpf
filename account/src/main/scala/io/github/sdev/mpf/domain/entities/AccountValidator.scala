@@ -11,21 +11,17 @@ object AccountValidator:
 
   type ValidationResult[T] = Validated[NonEmptyList[AccountValidation], T]
 
-  extension [T](error: AccountValidation) def invalidResult: ValidationResult[T] = Invalid(NonEmptyList(error, Nil))
-
-  extension [T](t: T) def validResult: ValidationResult[T] = Valid(t)
-
   private def validateName(name: String): ValidationResult[String] =
-    if (name.nonEmpty) name.validResult else NameIsEmpty.invalidResult
+    if (name.nonEmpty) name.validNel else NameIsEmpty.invalidNel
 
   private def validateUserId(userId: Long): ValidationResult[Long] =
-    if (userId > 0) userId.validResult else UserIdIsInvalid.invalidResult
+    if (userId > 0) userId.validNel else UserIdIsInvalid.invalidNel
 
   private def validateInitialAmount(initialAmount: BigDecimal): ValidationResult[BigDecimal] =
-    if (initialAmount > 0) initialAmount.validResult else InitialAmountNotPositive.invalidResult
+    if (initialAmount > 0) initialAmount.validNel else InitialAmountNotPositive.invalidNel
 
   private def validateCreatedAt(createdAt: OffsetDateTime): ValidationResult[OffsetDateTime] =
-    if (createdAt.isBefore(OffsetDateTime.now)) createdAt.validResult else CreationDateIsInvalid.invalidResult
+    if (createdAt.isBefore(OffsetDateTime.now)) createdAt.validNel else CreationDateIsInvalid.invalidNel
 
   def validate(account: Account): ValidationResult[Account] =
     (
