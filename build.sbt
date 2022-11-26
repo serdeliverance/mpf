@@ -3,50 +3,17 @@ import Dependencies._
 ThisBuild / organization := "io.github.sdev.mpf"
 ThisBuild / scalaVersion := "3.1.2"
 
-lazy val budget = (project in file("budget"))
+lazy val root = (project in file("."))
   .settings(
-    name := "budget",
+    name := "mpf",
     libraryDependencies ++= Seq(
       catsEffect,
       catsEffectKernel,
       catsEffectStd,
+      skunk,
+      flyway,
       catsEffectTestingSpecs2 % Test,
       munitCatsEffect3        % Test
     )
   )
 
-lazy val expenses = (project in file("expenses"))
-  .settings(
-    name := "expenses",
-    libraryDependencies ++= Seq(
-      catsEffect,
-      catsEffectKernel,
-      catsEffectStd,
-      catsEffectTestingSpecs2 % Test,
-      munitCatsEffect3        % Test
-    )
-  )
-
-lazy val balance = (project in file("balance"))
-  .settings(
-    name := "balance",
-    libraryDependencies ++= Seq(
-      catsEffect,
-      catsEffectKernel,
-      catsEffectStd,
-      catsEffectTestingSpecs2 % Test,
-      munitCatsEffect3        % Test
-    )
-  )
-
-lazy val account = (project in file("account"))
-  .settings(
-    name := "account",
-    libraryDependencies ++= Seq(
-      catsEffect,
-      catsEffectKernel,
-      catsEffectStd,
-      catsEffectTestingSpecs2 % Test,
-      munitCatsEffect3        % Test
-    )
-  )
