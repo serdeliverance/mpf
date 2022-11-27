@@ -27,13 +27,13 @@ ThisBuild / watchStartMessage := { case (iteration, ProjectRef(build, projectNam
 
 // scalafix
 
-ThisBuild / scalafixScalaBinaryVersion := scalaBinaryVersion.value
-ThisBuild / scalafixDependencies ++= Seq(
-  organizeImports
-)
+// ThisBuild / scalafixScalaBinaryVersion := scalaBinaryVersion.value
+// ThisBuild / scalafixDependencies ++= Seq(
+//   organizeImports
+// )
 
-ThisBuild / semanticdbEnabled := true
-ThisBuild / semanticdbVersion := scalafixSemanticdb.revision
+// ThisBuild / semanticdbEnabled := true
+// ThisBuild / semanticdbVersion := scalafixSemanticdb.revision
 
 // aliases
 
@@ -45,7 +45,7 @@ addCommandAlias("c", "compile")
 addCommandAlias("ca", "Test / compile")
 addCommandAlias("t", "test")
 addCommandAlias("r", "run")
-addCommandAlias("runLinter", ";scalafixAll --rules OrganizeImports")
+addCommandAlias("fmt", "scalafmt")
 addCommandAlias("up2date", ";dependencyUpdates")
 
 onLoadMessage +=
@@ -59,5 +59,6 @@ onLoadMessage +=
       |│ ${styled("ca")}          │ compile all       │
       |│ ${styled("t")}           │ test              │
       |│ ${styled("r")}           │ run               │
+      |│ ${styled("fmt")}         │ fmt               │
       |│ ${styled("runLinter")}   │ fmt & fix checks  │
       |╰─────────────┴───────────────────╯""".stripMargin

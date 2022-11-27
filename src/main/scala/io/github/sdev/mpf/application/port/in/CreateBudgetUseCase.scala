@@ -5,4 +5,4 @@ import cats.effect.IO
 
 trait CreateBudgetUseCase:
 
-    def create(budget: Budget): IO[Budget]
+  def create(budget: Budget): IO[Budget]

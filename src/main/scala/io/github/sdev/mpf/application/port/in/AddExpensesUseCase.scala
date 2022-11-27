@@ -5,4 +5,4 @@ import cats.effect.IO
 
 trait AddExpensesUseCase:
 
-    def add(expenses: List[Expense]): IO[Unit]
+  def add(expenses: List[Expense]): IO[Unit]
