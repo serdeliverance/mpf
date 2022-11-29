@@ -11,6 +11,10 @@ object Dependencies {
     val http4s = "0.23.1"
 
     val organizeImports = "0.6.0"
+
+    val postgres = "42.2.18"
+    val logback = "1.2.6"
+    val log4cats = "2.2.0"
   }
 
   val catsEffect              = "org.typelevel"        %% "cats-effect"                % V.catsEffect
@@ -25,4 +29,7 @@ object Dependencies {
 
   val skunk = "org.tpolecat" %% "skunk-core" % V.skunk
   val flyway =  "org.flywaydb" % "flyway-core" % V.flyway
+  val postgres = "org.postgresql" % "postgresql" % V.postgres
+  val logback = "ch.qos.logback" % "logback-classic" % V.logback
+  val log4cats = "org.typelevel" %% "log4cats-slf4j" % V.log4cats
 }

@@ -6,7 +6,7 @@ import skunk.implicits._
 import skunk.codec.text._
 
 object Database:
-    case class DbConfig(url: String, password: String)
+    case class DbConfig(url: String, user: String, password: String)
 
     def checkPostgresConnection(pool: Resource[IO, Session[IO]]): IO[Unit] =
         pool.use { session =>

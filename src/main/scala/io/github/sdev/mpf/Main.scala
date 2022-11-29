@@ -5,8 +5,9 @@ import cats.effect.IO
 import cats.effect.Resource
 import io.github.sdev.mpf.adapter.out.migration.Migrator.initializeDb
 import io.github.sdev.mpf.adapter.out.migration.Migrator
-import io.github.sdev.mpf.config.Database.DbConfig
+import io.github.sdev.mpf.config.Database.{DbConfig, checkPostgresConnection}
 import skunk.Session
+import natchez.Trace.Implicits.noop
 
 object Main extends IOApp.Simple {
 
@@ -26,5 +27,7 @@ object Main extends IOApp.Simple {
             )
           .evalTap(checkPostgresConnection)
       yield ()
+    
+    r.use(_ => IO(()))
 
 }

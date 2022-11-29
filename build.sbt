@@ -15,6 +15,9 @@ lazy val root = (project in file("."))
       http4sCirce,
       skunk,
       flyway,
+      postgres,
+      logback,
+      log4cats,
       catsEffectTestingSpecs2 % Test,
       munitCatsEffect3        % Test
     )

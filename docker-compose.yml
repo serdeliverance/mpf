@@ -8,8 +8,8 @@ services:
       - "TZ=Europe/Amsterdam"
       - "POSTGRES_USER=root"
       - "POSTGRES_PASSWORD=root"
-      - "POSTGRES_DB=news"
+      - "POSTGRES_DB=mpfdb"
     ports:
-      - 5432:5432
+      - 45432:5432
     volumes:
       - ./sql:/docker-entrypoint-initdb.d
