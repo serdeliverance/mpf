@@ -14,6 +14,7 @@ lazy val root = (project in file("."))
       http4sEmberServer,
       http4sCirce,
       skunk,
+      skunkCirce,
       flyway,
       postgres,
       logback,

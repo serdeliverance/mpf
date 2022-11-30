@@ -6,5 +6,6 @@ import io.github.sdev.mpf.domain.Budget
 import cats.effect.IO
 
 class CreateBudgetService(budgetRepository: BudgetRepository) extends CreateBudgetUseCase:
-  // TODO
-  def create(budget: Budget): IO[Budget] = ???
+
+  def create(budget: Budget): IO[Budget] =
+    budgetRepository.save(budget)

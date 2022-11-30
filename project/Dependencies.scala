@@ -28,6 +28,7 @@ object Dependencies {
   val http4sCirce = "org.http4s" %% "http4s-circe" % V.http4s
 
   val skunk = "org.tpolecat" %% "skunk-core" % V.skunk
+  val skunkCirce = "org.tpolecat" %% "skunk-circe" % V.skunk
   val flyway =  "org.flywaydb" % "flyway-core" % V.flyway
   val postgres = "org.postgresql" % "postgresql" % V.postgres
   val logback = "ch.qos.logback" % "logback-classic" % V.logback
