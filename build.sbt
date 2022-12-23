@@ -13,6 +13,7 @@ lazy val root = (project in file("."))
       http4sDsl,
       http4sEmberServer,
       http4sCirce,
+      circeGeneric,
       skunk,
       skunkCirce,
       flyway,
