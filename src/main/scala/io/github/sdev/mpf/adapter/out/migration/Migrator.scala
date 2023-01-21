@@ -6,12 +6,11 @@ import org.flywaydb.core.Flyway
 
 object Migrator:
 
-    def initializeDb(dbConfig: DbConfig): IO[Unit] =
-        IO.delay {
-            val fw = Flyway
-                .configure()
-                .dataSource(dbConfig.url, dbConfig.user, dbConfig.password)
-                .load()
-            fw.migrate()
-        }
-        .as(())
+  def initializeDb(dbConfig: DbConfig): IO[Unit] =
+    IO.delay {
+      val fw = Flyway
+        .configure()
+        .dataSource(dbConfig.url, dbConfig.user, dbConfig.password)
+        .load()
+      fw.migrate()
+    }.as(())

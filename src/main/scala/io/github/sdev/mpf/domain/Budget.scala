@@ -1,6 +1,8 @@
 package io.github.sdev.mpf.domain
 
-case class Budget(month: Int, year: Int, ins: List[Income] = List.empty, outs: List[Outcome] = List.empty):
+import java.util.UUID
+
+case class Budget(id: UUID, month: Int, year: Int, ins: List[Income] = List.empty, outs: List[Outcome] = List.empty):
   def totalIncome(): BigDecimal = ins.map(_.amount).sum
 
   def totalOutcome(): BigDecimal = outs.map(_.amount).sum

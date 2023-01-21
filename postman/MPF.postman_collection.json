@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "63cec6c7-561d-4ac8-8ad5-1b2d8d840490",
+		"name": "MPF",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21608069"
+	},
+	"item": [
+		{
+			"name": "create budget",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": 1,\n    \"month\": 2,\n    \"year\": 2023,\n    \"ins\": [\n        {\n            \"concept\": \"salary\",\n            \"amount\": 3500\n        }\n    ],\n    \"outs\": [\n        {\n            \"concept\": \"joda\",\n            \"amount\": 50\n        },\n        {\n            \"concept\": \"celular\",\n            \"amount\": 35\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/budgets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"budgets"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

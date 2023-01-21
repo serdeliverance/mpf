@@ -1,7 +1,7 @@
-DROP TABLE IF EXISTS "mpf";
+DROP TABLE IF EXISTS "budget";
 
-CREATE TABLE IF NOT EXISTS "mpf" (
-  id SERIAL PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS "budget" (
+  uuid UUID PRIMARY KEY,
   "month" INTEGER NOT NULL,
   "year" INTEGER NOT NULL,
   "ins" jsonb DEFAULT '{}'::jsonb,
